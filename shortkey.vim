@@ -10,7 +10,8 @@ nmap <C-y>/ :s/@@ \(.*\)/@@ 「\1」<cr>
 vmap <C-y>c :s/\n## .\{-\}\n@@ //g<cr>
 
 " Shortkey to seperate original paragraphs
-let pattern=['「.\{-\}」', '.\{-\}[、。]']
+let pattern=['「.\{-\}」', '.\{-\}[。]']
+" let pattern=['「.\{-\}」', '.\{-\}[、。]']
 let matched='\(I cannot be matched\)'
 for p in pattern
     let matched = matched . '\\|\(' . p . '\)'
